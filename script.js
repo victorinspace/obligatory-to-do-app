@@ -1,5 +1,15 @@
-// TO-DO
-// - A user should be able to see a list of current TO-DO’s
-// - A user should be able to make a TO-DO as completed
-// - When a user mark’s a TO-DO as completed the message of the TO-DO should be crossed out (using strikethrough font)
-// - A user should have the option of deleting TO-DO’s that have been mark completed
+// connect and store task item entry field
+function storeTaskItem() {
+    let taskItem = document.getElementById('task-item').value;
+    if (taskItem == '') {
+        alert('I need orders!');
+        return false;
+    }
+    console.log(taskItem);
+}
+
+// TO-DO: 
+// - Figure out how they can press 'Enter' to add item
+
+// display the persons added tasks
+
