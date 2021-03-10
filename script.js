@@ -1,19 +1,29 @@
-// connect and store task item entry field
-const addTaskItemButton = document
+// TO-DO: 
+// - Figure out how they can press 'Enter' to add item
+
+let addTaskItemButton = document
     .getElementById("add-task-button")
     .addEventListener("click", storeTaskItem);
 
-function storeTaskItem() {
+function storeTaskItem(e) {
+    
     let taskItem = document.getElementById('task-item').value;
+    
     if (taskItem == '') {
         alert('I need orders!');
         return false;
     }
-    console.log(taskItem);
+    
+    let output = document.getElementById("list-tasks");
+    output.innerHTML = `<li>${taskItem}</li>`;
 }
 
-// TO-DO: 
-// - Figure out how they can press 'Enter' to add item
+
+
+
+
+
 
 // display the persons added tasks
-
+// let taskItemDisplay = document.createElement('li');
+// document.getElementById('list-tasks').append(taskItem)
