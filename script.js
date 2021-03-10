@@ -1,4 +1,8 @@
 // connect and store task item entry field
+const addTaskItemButton = document
+    .getElementById("add-task-button")
+    .addEventListener("click", storeTaskItem);
+
 function storeTaskItem() {
     let taskItem = document.getElementById('task-item').value;
     if (taskItem == '') {
