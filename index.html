@@ -4,20 +4,25 @@
 
 <head>
     <meta charset="utf-8">
-
-    <title>Power Word: To-Do</title>
     <meta name="description" content="to-do">
     <meta name="author" content="Victor Velasquez">
 
+    <title>Power Word: To-Do</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
 </head>
 
 <body>
     <form>
         <label for="task-item">Add a task:</label>
-        <input type="text" id="task-item" name="task-item" placeholder="Your bidding?">
+        <input type="text" id="new-task-item" 
+            name="task-item" placeholder="Your bidding?">
+
         <button type="button" id="add-task-button">ADD</button>
     </form>
+
+    <!-- Displays Added Items -->
     <ul id="list-tasks"></ul>
 
     <script src="script.js"></script>
