@@ -7,13 +7,20 @@ const testOutput = function (name, out) {
     console.log(`${name}: ${out}`);
 };
 
+// listen for new task that's added
 let addTaskItemButton = document
     .getElementById("add-task-button")
     .addEventListener("click", storeTaskItem);
 
+// listen for the delete button to be clicked
+// let deleteButton = document
+//     .getElementsByClassName("delete")
+//     .addEventListener("click", deleteTaskItem);
+
 let incrementerObject = 0;
 
 function storeTaskItem(e) {
+    e.preventDefault();
     incrementerObject++;
     
     // grab the new item
@@ -30,18 +37,33 @@ function storeTaskItem(e) {
         localStorage.setItem(incrementerObject, taskItem);
     }
     
-    // print out the task item
-    let taskItemListView = document.getElementById("list-tasks");
+    // grab the list container
+    let taskContainer = document.getElementById("list-tasks");
 
+    // create new list item element
     let li = document.createElement('li');
 
     li.appendChild(
         document.createTextNode(localStorage.getItem(incrementerObject))
     );
 
-    testOutput('event', li);
+    // create delete button
+    let deleteItem = document.createElement('button');
 
-    taskItemListView.appendChild(li);
+    // add delete button
+    deleteItem.appendChild(document.createTextNode('X'));
+
+    deleteItem.classList.add('delete');
+
+    taskContainer.appendChild(deleteItem);
+
+    taskContainer.appendChild(li);
+
+    console.log(taskContainer.appendChild(li));
+}
+
+function deleteTaskItem(e) {
+    console.log(e);
 }
 
 // to delete the localstorage String

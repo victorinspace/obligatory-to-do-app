@@ -7,3 +7,14 @@ body {
 h1 {
     color: rgb(77, 77, 77);
 }
+
+li {
+    list-style-type: none;
+}
+
+.delete {
+    background-color: red;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
