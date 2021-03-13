@@ -47,7 +47,7 @@ function removeTaskItem(e) {
 
 // listen for newly added task
 let addTaskItemButton = document
-    .querySelector("#add-task-button")
+    .getElementById("add-task-button")
     .addEventListener("click", saveAndPrintTaskItem);
     
 // create an ID for each task item
@@ -62,9 +62,9 @@ const createDeleteButton = function() {
 }
 
 
-// let letThemDelete = document
-//     .querySelector(".remove-item")
-//     .addEventListener("click", removeTaskItem);
+let letThemDelete = document
+    .getElementsByClassName("remove-item")
+    .addEventListener("click", removeTaskItem);
 
 
 
