@@ -1,70 +1,73 @@
 // TO-DO: 
-// - ability to delete added items
-// - create delete button on new task item elements
-// - create 'done' button on new task item elements
+// - add 'delete' class to the delete button
+// - successfully listen to delete button click
+// - successfully delete task item from list
 
-const testOutput = function (name, out) {
-    console.log(`${name}: ${out}`);
-};
 
-// listen for new task that's added
-let addTaskItemButton = document
-    .getElementById("add-task-button")
-    .addEventListener("click", storeTaskItem);
 
-// listen for the delete button to be clicked
-// let deleteButton = document
-//     .getElementsByClassName("delete")
-//     .addEventListener("click", deleteTaskItem);
+function saveAndPrintTaskItem(e) {
+    // e.preventDefault();
+    newTaskID++;
 
-let incrementerObject = 0;
+    // grab the new task item from the input field
+    let taskItem = document.getElementById("new-task-item").value;
 
-function storeTaskItem(e) {
-    e.preventDefault();
-    incrementerObject++;
-    
-    // grab the new item
-    let taskItem = document.getElementById('new-task-item').value;
-    
-    // check if input is blank
+    // check to see if the input is blank
     if (taskItem == "") {
-        alert('I need orders!');
+        alert("I need orders!");
         return false;
     }
 
     // store the item
-    if (typeof(Storage) !== 'undefined') {
-        localStorage.setItem(incrementerObject, taskItem);
+    if (typeof Storage !== "undefined") {
+        localStorage.setItem(newTaskID, taskItem);
     }
-    
-    // grab the list container
+
+    // grab the list container ID
     let taskContainer = document.getElementById("list-tasks");
 
-    // create new list item element
-    let li = document.createElement('li');
+    // create new list element to place tasks within the taskContainer
+    let li = document.createElement("li");
 
-    li.appendChild(
-        document.createTextNode(localStorage.getItem(incrementerObject))
-    );
+    // append the new task item to the list element
+    li.appendChild(document.createTextNode(localStorage.getItem(newTaskID)));
 
-    // create delete button
-    let deleteItem = document.createElement('button');
-
-    // add delete button
-    deleteItem.appendChild(document.createTextNode('X'));
-
-    deleteItem.classList.add('delete');
+    createDeleteButton();
 
     taskContainer.appendChild(deleteItem);
 
     taskContainer.appendChild(li);
-
-    console.log(taskContainer.appendChild(li));
 }
 
-function deleteTaskItem(e) {
+function removeTaskItem(e) {
     console.log(e);
 }
+
+
+
+// listen for newly added task
+let addTaskItemButton = document
+    .querySelector("#add-task-button")
+    .addEventListener("click", saveAndPrintTaskItem);
+    
+// create an ID for each task item
+let newTaskID = 0;
+    
+// create the delete button to add to task items
+let deleteItem = document.createElement("button");
+const createDeleteButton = function() {
+    // append the "X" for the delete button
+    deleteItem.appendChild(document.createTextNode("X"));
+    deleteItem.classList.add("remove-item");
+}
+
+
+// let letThemDelete = document
+//     .querySelector(".remove-item")
+//     .addEventListener("click", removeTaskItem);
+
+
+
 
 // to delete the localstorage String
 // localStorage.removeItem("name");
