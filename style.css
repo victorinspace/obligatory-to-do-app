@@ -1,15 +1,20 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: antiquewhite;
+    background-color: rgb(0, 89, 116);
     font-size: xx-large;
-}
-
-h1 {
-    color: rgb(77, 77, 77);
+    color:rgb(162, 198, 255);
 }
 
 li {
     list-style-type: none;
+}
+
+input {
+    padding: 5px;
+}
+
+button {
+    padding: 5px;
 }
 
 .delete {
