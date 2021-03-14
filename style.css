@@ -17,7 +17,7 @@ button {
     padding: 5px;
 }
 
-.delete {
+.delete-button {
     background-color: red;
     border: none;
     padding: 5px 10px;
