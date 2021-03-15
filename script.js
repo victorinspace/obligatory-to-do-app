@@ -9,8 +9,14 @@ let addTaskItemButton = document
     .getElementById("add-task-button")
     .addEventListener("click", saveAndPrintTaskItem);
 
-let deleteTaskItem = function(item) {
-    localStorage.removeItem(item);
+let deleteTaskItem = function() {
+    // localStorage.removeItem(item);
+    let listenForDelete = document.getElementById(createKey);
+    listenForDelete.addEventListener("click", testDeleteFunction);
+
+    function testDeleteFunction() {
+        console.log("delete clicked! ", listenForDelete);
+    }
 }
 
 let createKey = 0;
@@ -26,7 +32,7 @@ function saveAndPrintTaskItem() {
     }
     localStorage.setItem(createKey, taskItem);
     let grabTaskItem = localStorage.getItem(createKey);
-    console.log("added task item: ", grabTaskItem);
+    console.log(`added task item! key: ${createKey}, value: ${grabTaskItem}`);
 
     // ** print the task item to the page and the delete button
     let taskContainer = document.getElementById("list-tasks");
@@ -35,7 +41,10 @@ function saveAndPrintTaskItem() {
     taskContainer.appendChild(li);
     let deleteButton = document.createElement("button");
     deleteButton.appendChild(document.createTextNode("X"));
+    deleteButton.setAttribute("id", createKey)
     deleteButton.classList.add('delete-button');
     li.appendChild(deleteButton);    
+
+    
 }
 
