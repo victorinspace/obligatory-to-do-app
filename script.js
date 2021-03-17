@@ -29,6 +29,7 @@ function saveAndPrintTaskItem(e) {
     // ** print the task item to the page and the delete button
     let taskContainer = document.getElementById("list-tasks");
     let li = document.createElement("li");
+    li.setAttribute("onclick", "markCompleted(this)")
     li.appendChild(document.createTextNode(grabTaskItem));
     taskContainer.appendChild(li);
     let deleteButton = document.createElement("button");
@@ -43,4 +44,12 @@ function didUserDelete(e) {
     let deletedListElement = document.getElementById(e).parentElement;
     deletedListElement.remove();
     sessionStorage.removeItem(e);
+}
+
+
+function markCompleted(e) {
+    
+    let markComplete = e;
+    markComplete.classList.add("task-complete")
+    console.log(e);
 }

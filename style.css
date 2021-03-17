@@ -15,6 +15,7 @@ input {
 
 button {
     padding: 5px;
+    margin-left: 10px;
 }
 
 .delete-button {
@@ -22,4 +23,10 @@ button {
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+.task-complete {
+    font-style: italic;
+    text-decoration: line-through;
+    color: #eee;
 }
