@@ -49,7 +49,5 @@ function didUserDelete(e) {
 
 function markCompleted(e) {
     let markComplete = e;
-    console.log(markComplete);
     markComplete.classList.toggle("task-complete");
-    console.log(markComplete);    
 }
