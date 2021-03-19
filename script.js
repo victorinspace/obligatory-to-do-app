@@ -1,10 +1,3 @@
-// ** TO-DO: 
-// 1. A user should be able to mark a TO-DO as completed
-// 2. When a user mark’s a TO-DO as completed, the text of 
-//      the TO-DO should be crossed out (using strikethrough font)
-// 3. A user should have the option of deleting TO-DO’s 
-//      that have been mark completed
-
 let addTaskItemButton = document
     .getElementById("add-task-button")
     .addEventListener("click", saveAndPrintTaskItem);
@@ -45,7 +38,6 @@ function didUserDelete(e) {
     deletedListElement.remove();
     sessionStorage.removeItem(e);
 }
-
 
 function markCompleted(e) {
     let markComplete = e;
