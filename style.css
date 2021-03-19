@@ -25,6 +25,10 @@ button {
     border-radius: 5px;
 }
 
+.delete-button:hover {
+    background-color: rgb(179, 0, 0);
+}
+
 .task-complete {
     font-style: italic;
     text-decoration: line-through;
