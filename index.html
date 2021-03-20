@@ -14,12 +14,13 @@
 </head>
 
 <body>
-    <form>
+    <form onsubmit="return false">
         <label for="task-item">Add a task:</label>
+        
         <input type="text" id="new-task-item" name="task-item" placeholder="Your bidding?">
-
-        <button type="button" id="add-task-button">ADD</button>
     </form>
+
+    <p>(Press "Enter" to submit.)</p>
 
     <!-- Displays Added Items -->
     <ul id="list-tasks"></ul>
