@@ -18,9 +18,6 @@ function saveAndPrintTaskItem(e) {
         }
         sessionStorage.setItem(createKey, taskItem);
         let grabTaskItem = sessionStorage.getItem(createKey);
-        console.log(
-            `added task item! key: ${createKey}, value: ${grabTaskItem}`
-        );
 
         // ** print the task item to the page and the delete button
         let taskContainer = document.getElementById("list-tasks");
