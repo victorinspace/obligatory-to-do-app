@@ -1,12 +1,12 @@
 # Power Word: To-Do
 
-_Classic To-Do application using vanilla JavaScript, HTML and CSS_
+\_Classic To-Do application using vanilla JavaScript, HTML and CSS.
 
 Use it [here](https://victorinspace.github.io/obligatory-to-do-app/).
 
 ## Power Word: To-Do
 
-![Vanilla JavaScript To-Do Application](.\images\victor-velasquez_todo-app_screenshot_v1.png)
+![image](https://github.com/victorinspace/obligatory-to-do-app/blob/main/images/victor-velasquez_todo-app_screenshot_v1.png)
 
 ## Summary
 

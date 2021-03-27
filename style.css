@@ -1,48 +1,57 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(0, 89, 116);
-    color:rgb(162, 198, 255);
-}
-
-p {
-    color: #eee;
-    font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(0, 89, 116);
 }
 
 label {
-    font-size:xx-large;
+  color: rgb(162, 198, 255);
+  font-size: xx-large;
 }
 
-li {
-    list-style-type: none;
-    font-size: x-large;
+p {
+  color: #eee;
+}
+
+#task-form > p {
+  font-style: italic;
 }
 
 input {
-    margin-left: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+li {
+  list-style-type: none;
+  font-size: x-large;
+}
+
+#task-list > li:nth-child(1) > p:nth-child(1) {
+  display: inline-flex;
+  /* flex-direction: row; */
 }
 
 button {
-    padding: 5px;
-    margin-left: 10px;
+  padding: 5px;
+  margin-left: 10px;
 }
 
 .delete-button {
-    background-color: red;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+  background-color: red;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  /* float: right; */
 }
 
 .delete-button:hover {
-    background-color: rgb(179, 0, 0);
+  background-color: rgb(179, 0, 0);
 }
 
 .task-complete {
-    font-style: italic;
-    text-decoration: line-through;
-    color: #eee;
+  font-style: italic;
+  text-decoration: line-through;
+  color: #eee;
 }
